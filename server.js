@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+var port = process.env.PORT || 8080
 
 function convertMonth(value){
             switch (value) {
@@ -97,6 +98,6 @@ app.get('/:parameter', function(req,res){
     
 })
 
-app.listen(8080, function(){
+app.listen(port, function(){
     console.log("listening on port 8080");
 })
